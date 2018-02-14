@@ -1,0 +1,48 @@
+
+
+{% extends 'mess/baseStudent.html' %}
+
+
+
+{% block body %}
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="width:50%;padding:25px;border:1px solid #85929E;margin:auto;background:#008CBA;text-align:center;">
+
+	{% if emptyfeedback %}
+			<strong><h4>{{emptyfeedback}}</h4></strong>
+	{% endif %}
+
+	{% if feedback %}
+		<h4><span class="glyphicon glyphicon-ok-sign" style="color:green;"></span> Your feedback is sent</h4>
+	{% endif %}
+	
+
+	<form action="{% url 'give_feedback' %}" method = "post" required>
+		{% csrf_token %}
+		<h3 style="color:white;">Give Feedback:</h3>
+		<input type="text" name="give_feedback" size="35" required><br></br>
+		<button type="submit" style="background:#F58731;color:white;">submit</button>
+	</form>
+</div>
+
+
+
+{% if Notfeedback %}
+	<p><strong><h4>{{Notfeedback}}</h4></strong></p>
+{% endif %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,105 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MESS MANAGEMENT SYSTEM</title>
+	<!-- load the path to your staticfiles-->
+	{% load staticfiles %}
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'mess/style1.css' %}"/>
+
+
+</head>
+
+
+
+
+<body class="background-image">
+
+
+	<div class="background-image"></div>
+
+        <div class="content">
+
+
+<form style="background:#FFFFFF";">
+	<br/>
+	<div>
+	{% csrf_token %}
+	&nbsp
+	<img src="{% static 'mess/images/mnlogo.png' %}" style="width:100px;height:110px;" align="left"/>
+	</div>
+	
+	
+	<h3 style="text-align:right;color:#F58731;">Indian Institute of Technology &nbsp</h3>
+	
+	<h3 style="text-align:right;color:#F58731;">Jodhpur &nbsp</h3>
+</form>
+
+
+
+
+<!--Navigation Menu start-->
+
+<!--
+<nav class="navbar navbar-default navbar-custom">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{% url 'home' %} "><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;HOME</a>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="topNavBar">
+			<ul class="nav navbar-nav">
+				<li class="">
+					<a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;STUDENT/VENDOR LOGIN</a>
+				</li>
+				<li class="">
+					<a href="/admin"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;ADMIN LOGIN</a>
+				</li>
+			</ul>
+			
+		</div>		
+		
+	</div>
+</nav>
+-->
+<!--Navigation Menu End-->
+
+
+
+{% block body %}
+
+{% endblock %}
+
+
+
+
+	</div>
+
+
+
+</body>
+
+
+
+
+
+</html>

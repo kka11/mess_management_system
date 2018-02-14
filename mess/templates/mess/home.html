@@ -1,0 +1,25 @@
+
+
+{% extends 'mess/baseHome.html' %}
+
+
+{% block body %}
+
+	
+	{% load static %}
+	<div>
+		<h2 style="font-family:italic;">	</h2>
+	</div>
+
+<div style="text-align:center;">
+<div>
+<div style="border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;background-color: #008CBA;">Mess Management System</div>
+
+	<br/>
+	<br/>
+</div>
+<a href="{% url 'login' %}">
+<button style=" background-color: #F4A460;border: none;padding: 15px 32px;text-align: center;display: inline-block;font-size: 16px;"><span class="glyphicon glyphicon-log-in"></span>&nbsp; LOGIN</button></a>
+</div>
+
+{% endblock %}

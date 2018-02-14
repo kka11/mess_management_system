@@ -1,0 +1,77 @@
+
+/*
+body{
+	
+	background: lightseagreen
+	height:100%;
+	width:100%;
+	background-image: url("images/background.jpg");
+	
+	
+	background-size:cover;
+       -webkitfilter: blur(8px);
+	-moz-filter: blur(8px);
+	-o-filter: blur(8px);
+	-ms-filter: blur(8px);
+	filter: blur(8px); 
+	
+	
+}
+    */
+
+
+
+
+.background-image{
+	height:100%;
+	width:100%;
+	background-image: url("images/back.jpg");
+	/*-webkitfilter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);  */
+	
+	
+	background-size:cover;
+
+
+	position: fixed;
+  	left: 0;
+  	right: 0;
+  	z-index: 1;
+
+
+}
+
+
+
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  
+}
+
+
+
+
+
+.navbar-brand{
+	font-family:'satisfy',cursive;
+}
+
+.navbar{
+	border-radius: 0;
+}
+
+.navbar-custom {
+    color: #228B22;
+    background-color: 	#A9A9A9;
+}
+
+
+
+

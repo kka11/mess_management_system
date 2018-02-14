@@ -1,0 +1,55 @@
+
+
+{% extends 'mess/baseVendor.html' %}
+
+{% block body %}
+
+
+<div style="width:50%;padding:25px;border:1px solid #85929E;margin:auto;background:#008CBA  ;text-align:left;color:white;">
+
+
+{% if no_feedback %}
+	<p><strong>{{no_feedback}}</strong></p>
+{% endif %}
+
+{% if feedback_exit %}
+	{% csrf_token %}
+	<h2 style="text-align:center;">{{feedback_exit}}</h2>
+	<hr/>
+	{% for i in feed %}
+		<ul>
+			{% if i.number %}
+				<li><h3> 
+					<form action="{% url 'delete_feedback' %}" method="post">
+						{{i.feedbac}}&nbsp 
+						{% csrf_token %}
+						<!-- <button type="button" class="btn btn-info btn-lg" value = {{i.id}} data-toggle="modal" data-target="#myModal" style="background:#F58731;">Delete</button>   -->
+						<button name ='delete_feed' type ="submit" value = {{i.id}} style="color:red;">delete</button> 
+					</form>
+				</h3>
+					
+			{% endif %}
+</li>
+		</ul>
+	{% endfor %}
+	
+{% endif %}
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

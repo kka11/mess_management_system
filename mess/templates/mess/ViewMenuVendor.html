@@ -1,0 +1,206 @@
+
+{% extends 'mess/baseVendor.html' %}
+
+{% block body %}
+<!--
+<table style="width:100%;font-size:150%;text-align:center;" class="table table-bordered">
+	<h3 style="text-align:center;">Mess Menu</h3>
+	<tr class="active">
+		<th>Day</th>
+		<th>Breakfast</th>
+		<th>Lunch</th>
+		<th>Dinner</th>
+	</tr>
+	<tr class="danger">
+		<td>Daily</td>
+		<td>{{breakfast.daily}}</td>
+		<td>{{lunch.daily}}</td>
+		<td>{{dinner.daily}}</td>
+	</tr>
+	<tr class="success">
+		<td>Monday</td>
+		<td>{{breakfast.monday}}</td>
+		<td>{{lunch.monday}}</td>
+		<td>{{dinner.monday}}</td>
+	</tr>
+	<tr class="warning">
+		<td>Tuesday</td>
+		<td>{{breakfast.tuesday}}</td>
+		<td>{{lunch.tuesday}}</td>
+		<td>{{dinner.tuesday}}</td>
+	</tr>
+	<tr class="info">
+		<td>Wednesday</td>
+		<td>{{breakfast.wednesday}}</td>
+		<td>{{lunch.wednesday}}</td>
+		<td>{{dinner.wednesday}}</td>
+	</tr>
+	<tr class="danger">
+		<td>Thrusday</td>
+		<td>{{breakfast.thrusday}}</td>
+		<td>{{lunch.thrusday}}</td>
+		<td>{{dinner.thrusday}}</td>
+	</tr>
+	<tr class="success">
+		<td>Friday</td>
+		<td>{{breakfast.friday}}</td>
+		<td>{{lunch.friday}}</td>
+		<td>{{dinner.friday}}</td>
+	</tr>
+	<tr class="info">
+		<td>Saturday</td>
+		<td>{{breakfast.saturday}}</td>
+		<td>{{lunch.saturday}}</td>
+		<td>{{dinner.saturday}}</td>
+	</tr>
+	<tr class="danger">
+		<td>Sunday</td>
+		<td>{{breakfast.sunday}}</td>
+		<td>{{lunch.sunday}}</td>
+		<td>{{dinner.sunday}}</td>
+	</tr>
+</table>
+
+-->
+
+<!--
+<form action="{% url 'login' %}" method = "get">
+	<button type="submit">Logout</button>
+</form><br>
+-->
+
+
+
+
+
+
+
+
+<div class="container">
+  
+  <!-- Trigger the modal with a button -->
+  <div style="width:50%;height:200px;padding:25px;border:1px solid #85929E;margin:auto;background:#008CBA ;text-align:center;color:white;">
+	<h3>Click on View Menu to see Menu</h3>
+  	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModa" style="background:#F58731;">View Menu</button>
+  </div>
+  <!-- Modal -->
+   
+<div id="myModa" class="modal fade" role="dialog">
+	
+  <div class="modal-dialog">
+
+    
+
+    <div class="modal-content" style="background:gainsboro  ;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+     
+      <div class="modal-body">
+				
+		<table style="width:100%;font-size:150%;" class="table table-bordered">
+	<h3 style="text-align:center;">Mess Menu</h3>
+	<tr class="active">
+		<th>Day</th>
+		<th>Breakfast</th>
+		<th>Lunch</th>
+		<th>Dinner</th>
+	</tr>
+	<tr class="danger">
+		<td>Daily</td>
+		<td>{{breakfast.daily}}</td>
+		<td>{{lunch.daily}}</td>
+		<td>{{dinner.daily}}</td>
+	</tr>
+	<tr class="success">
+		<td>Monday</td>
+		<td>{{breakfast.monday}}</td>
+		<td>{{lunch.monday}}</td>
+		<td>{{dinner.monday}}</td>
+	</tr>
+	<tr class="warning">
+		<td>Tuesday</td>
+		<td>{{breakfast.tuesday}}</td>
+		<td>{{lunch.tuesday}}</td>
+		<td>{{dinner.tuesday}}</td>
+	</tr>
+	<tr class="info">
+		<td>Wednesday</td>
+		<td>{{breakfast.wednesday}}</td>
+		<td>{{lunch.wednesday}}</td>
+		<td>{{dinner.wednesday}}</td>
+	</tr>
+	<tr class="danger">
+		<td>Thrusday</td>
+		<td>{{breakfast.thrusday}}</td>
+		<td>{{lunch.thrusday}}</td>
+		<td>{{dinner.thrusday}}</td>
+	</tr>
+	<tr class="success">
+		<td>Friday</td>
+		<td>{{breakfast.friday}}</td>
+		<td>{{lunch.friday}}</td>
+		<td>{{dinner.friday}}</td>
+	</tr>
+	<tr class="info">
+		<td>Saturday</td>
+		<td>{{breakfast.saturday}}</td>
+		<td>{{lunch.saturday}}</td>
+		<td>{{dinner.saturday}}</td>
+	</tr>
+	<tr class="danger">
+		<td>Sunday</td>
+		<td>{{breakfast.sunday}}</td>
+		<td>{{lunch.sunday}}</td>
+		<td>{{dinner.sunday}}</td>
+	</tr>
+</table>
+		
+			
+			
+
+
+
+
+
+
+
+				
+      </div>
+      
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      
+    </div>
+
+  </div>
+
+</div>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+

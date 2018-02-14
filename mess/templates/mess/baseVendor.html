@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<title>MESS MANAGEMENT SYSTEM</title>
+
+		
+		<!-- load the path to your staticfiles-->
+		{% load staticfiles %}
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'mess/style1.css' %}"/>
+
+	</head>
+
+
+
+
+
+
+
+<body>
+
+
+	
+		
+	<div class="background-image"></div>
+
+
+
+
+<div class="content">
+
+
+
+	<form style="background:#FFFFFF ";">
+		{% csrf_token %}
+		<br/>
+		<div>
+			
+			<img src="{% static 'mess/images/mnlogo.png' %}" style="width:100px;height:110px;" align="left"/>
+		</div>
+	
+	
+		<h3 style="text-align:right;color:#F58731;">Indian Institute of Technology &nbsp</h3>
+		<h3 style="text-align:right;color:#F58731;">Jodhpur &nbsp</h3><br/>
+	</form>
+
+
+
+
+
+
+		<!--Naviation menu start-->
+		<nav class="navbar navbar-default navbar-custom">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="{% url 'vendor' %} " style="color:white;"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;HOME</a>
+				</div>
+		
+				<div class="collapse navbar-collapse" id="topNavBar">
+					<ul class="nav navbar-nav">
+						<li class="">
+							<a href="{% url 'Deduct_balance' %}" style="color:white;">DEDUCT BALANCE</a>
+						</li>				
+						<li class="">
+							<a href="{% url 'view_menu_vendor' %}" style="color:white;">VIEW MENU</a>
+						</li>
+						<li class="">
+							<a href="{% url 'view_feedback' %}" style="color:white;">VIEW FEEDBACK</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="">
+							<a href="{% url 'logout' %}" style="color:white;">
+								<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;LOGOUT
+							</a>
+						</li>
+					</ul>
+				</div>		
+			</div>
+		</nav>
+		<!--Navigation Menu End-->
+		<div style="width:15%;background:#008CBA;color:white;">
+		{% if username %}
+			<h3>Welcome:{{username}}</h3>	
+		{% endif %}
+		</div>
+
+		{% block body %}
+		<!--Here comes the code of pages that are abstracted from this page-->
+		{% endblock %}
+
+</div>
+
+
+</body>
+
+
+
+</html>

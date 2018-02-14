@@ -1,0 +1,87 @@
+
+
+{% extends 'mess/baseHome.html' %}
+
+
+
+{% block body %}
+
+
+<div style="background-color: #4CAF50;border: none;color: white;padding: 15px 32px;text-align: center;font-size: 16px;margin: auto;background-color: #008CBA;width:20%;">Mess Management System</div><br/>
+
+
+
+
+<form action ="{% url 'login_page' %}" method = "post" id="typeOfRole">
+	{% csrf_token %}
+	<div class="container" style="background-color: #008CBA ;width: 30%;height: 320px ;border: 2px solid #85929E  ;padding: 5px;margin: auto;">
+		<div style="text-align:right;color:red;">
+			<a href="{% url 'home' %}" style="color:white;">
+         		 	<span class="glyphicon glyphicon-remove"></span>
+        		</a>
+		</div>
+		
+		
+		{% if unsuccess_message %}
+			<h4><strong>{{unsuccess_message}}</strong></h4>
+		{% endif %}
+
+		
+
+
+
+		<div style="text-align:center;">
+			<h3 style="color:white;"><u>Authentication</u></h3>
+			<br/>
+			<label style="color:white;"><b>Username </b></label>
+    	<input type="text" placeholder="Enter Username" name="username" style="background:ivory;" required ><br><br>
+
+    	<label style="color:white;"><b>Password </b></label>
+    	<input type="password" placeholder="Enter Password" name="password" style="background:ivory;" required><br><br>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-2">   </div>
+			<div class="col-sm-8">
+				<label style="color:white;"><b>Select Role</b></label>
+				<select name = "role" form = "typeOfRole" style="background:#F58731;color:white;">
+					<option value="student">student</option>
+					<option value="vendor">vendor</option>
+					<option value="admin">admin</option>
+				</select>
+			</div>
+		</div>
+
+		<br/>
+
+
+
+		<div class="row">
+
+
+		<div class="col-sm-4">    </div>
+		
+		<div class="col-sm-8">
+
+		     <button type="submit" style="background:#F58731;color:white;">Submit</button>
+		</div>
+	</div>
+		<br/>
+	</div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+

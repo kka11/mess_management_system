@@ -1,0 +1,70 @@
+
+{% extends 'mess/baseStudent.html' %}
+
+{% block body %}
+
+
+
+
+
+
+
+{% load static %}
+
+
+<!--
+<div>
+	<img src="{% static 'mess/images/back.jpg' %}" style="width:;height:405px;" align="left" alt="My background" class="img-responsive">
+</div>
+-->
+
+
+
+
+<!--
+
+{% if success_message %}
+	<p><strong>{{success_message}}</strong></p>
+{% endif %}
+-->
+
+<!--
+{% if feedback %}
+	<p><strong>Your feedback : {{feedback}} is sent</strong></p>
+{% endif %}
+-->
+
+
+<!--
+<div style="width:900px;padding:25px;border:5px solid black;margin:25px;">
+	<form action="{% url 'Add_balance' %}" method = "get">
+  		 <h3>Add Balance <h3>(between 30 and 12000):
+		<input type="number" name="add_balance" min="30" max="12000">
+		<button type="submit">submit</button>
+	</form>
+</div>
+-->
+<!--
+<div style="width:900px;padding:25px;border:5px solid black;margin:25px;">
+	<form action="{% url 'give_feedback' %}" method = "post">
+		{% csrf_token %}
+		<h3>Give Feedback:</h3>
+		<input type="text" name="give_feedback"><br>
+		<button type="submit">submit</button>
+	</form>
+</div>
+-->
+<!--
+{% if emptyfeedback %}
+	<p><strong>{{emptyfeedback}}</strong></p>
+{% endif %}
+
+{% if Notfeedback %}
+	<p><strong>{{Notfeedback}}</strong></p>
+{% endif %}
+
+-->
+
+
+{% endblock %}
+

@@ -1,0 +1,107 @@
+
+
+{% extends 'mess/baseVendor.html' %}
+
+
+
+{% block body %}
+
+
+
+<!--Deduct Balance Start-->
+
+
+
+
+
+{% if message %}
+	<p><strong><h4>{{message}}</h4></strong></p>
+{% endif %}
+
+
+
+
+
+
+<div style="width:50%;height:240px;padding:25px;border:1px solid #85929E;margin:auto;background:#008CBA;text-align:center;color:white;">
+	{% if message %}
+	<p><strong><h4><span class="glyphicon glyphicon-ok-sign" style="color:green;"></span>{{message}}</h4></strong></p>
+	{% endif %}
+
+
+	{% if un_message %}
+	<p><strong><h4> <span class="glyphicon glyphicon-remove-sign" style="color:red;"></span>{{un_message}}</h4></strong></p>
+	{% endif %}
+
+<form action="{% url 'Deduct_balance' %}" id="idform" method = "post">
+	{% csrf_token %}
+	<h3>Deduct Balance</h3>
+	<h4>Select Student id:
+	<select name="student_id" style="background:#F58731;">
+		{% for st in student %}
+			<option value= "{{st.ID}}">{{st.ID}}</option>
+		{% endfor %}
+	</select>
+	</h4>
+	<!--	<button type="submit">submit</button> -->
+	
+
+<h4>Select Amount
+<select name="deduct_amount" style="background:#F58731;">
+	<option value="30">Breakfast</option>
+	<option value="50">Lunch</option>
+	<option value="40">Dinner</option>
+	
+	
+</select>
+</h4>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="background:#F58731;">Submit</button>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+         <h4>Are you sure you want to deduct balance?</h4>
+	<button type="submit" form="idform" style="color:green;">Confirm</button>
+	<a href="{% url 'Deduct_balance' %}" style="color:red;text-align:right;"><button type="button" >Cancel</button></a>
+        </div>
+        
+          
+        
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
