@@ -89,6 +89,7 @@ def student_view(request):
 
 def AddBalance(request):
 	
+	#Comments
 	#print(add_balance)
 	#print( type(add_balance))
 	#print(request.Student.id)
